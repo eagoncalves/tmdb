@@ -18,6 +18,9 @@ React-native project developed using the movie database api and Expo framework.
       
       
 ### Screens
+![Main](https://github.com/eagoncalves/tmdb/blob/master/src/resource/main.jpg)
 ![Details](https://github.com/eagoncalves/tmdb/blob/master/src/resource/details.jpg)
+![Search](https://github.com/eagoncalves/tmdb/blob/master/src/resource/search.jpg)
+![Loading](https://github.com/eagoncalves/tmdb/blob/master/src/resource/loading.jpg)
 
 
