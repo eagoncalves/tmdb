@@ -14,6 +14,10 @@ React-native project developed using the movie database api and Expo framework.
   - If you prefer use the iOS Simulator for Android Simulador follow the instructions:
       <br>[iOS Simuator](https://docs.expo.io/versions/v36.0.0/workflow/ios-simulator/)
       <br>[Android Simulator](https://docs.expo.io/versions/v36.0.0/workflow/android-studio-emulator/). 
+
+
+### APK
+[APK](https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40eloi-goncalves/tmdb-7e39f69202a048a685afc6686b183509-signed.apk)
       
       
 ### Screens
