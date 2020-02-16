@@ -44,6 +44,7 @@ export const styles = StyleSheet.create({
     title: {
       color: Colors.WHITE,
       fontSize: 24,
+      fontFamily: Typography.FONT_FAMILY_REGULAR,
       fontWeight: Typography.FONT_WEIGHT_EXTRA_BOLD
     },
     sub:{
@@ -62,6 +63,7 @@ export const styles = StyleSheet.create({
     },
     buttonTitle:{
       fontSize: 11,
+      fontFamily: Typography.FONT_FAMILY_REGULAR,
       fontWeight: Typography.FONT_WEIGHT_EXTRA_BOLD,
       lineHeight: 24,
       textTransform: Typography.FONT_TEXT_UPPERCASE,
@@ -75,6 +77,7 @@ export const styles = StyleSheet.create({
       opacity: 0.7,
       color: Colors.WHITE,
       fontSize: 13,
+      fontFamily: Typography.FONT_FAMILY_REGULAR,
       fontWeight: Typography.FONT_WEIGHT_REGULAR,
       lineHeight: 24
     },
@@ -85,6 +88,7 @@ export const styles = StyleSheet.create({
       width: 50,
       color: Colors.WHITE,
       fontSize: 13,
+      fontFamily: Typography.FONT_FAMILY_REGULAR,
       fontWeight: Typography.FONT_WEIGHT_BOLD,
       lineHeight: 24,
       marginRight: 23
@@ -92,8 +96,9 @@ export const styles = StyleSheet.create({
     aditionalText:{
       opacity: 0.7,
       color: Colors.WHITE,
-      fontSize: 13,
       lineHeight: 24,
+      fontSize: 13,
+      fontFamily: Typography.FONT_FAMILY_REGULAR,
       fontWeight: Typography.FONT_WEIGHT_REGULAR
     }
 });

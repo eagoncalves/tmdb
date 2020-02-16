@@ -29,6 +29,7 @@ export const styles = StyleSheet.create({
       height: 18,
       color: Colors.WHITE,
       fontSize: 13,
-      fontWeight: Typography.FONT_WEIGHT_BOLD,
+      fontFamily: Typography.FONT_FAMILY_REGULAR,
+      fontWeight: Typography.FONT_WEIGHT_BOLD
     }
 });

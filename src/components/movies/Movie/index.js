@@ -22,6 +22,7 @@ function Movie({ filtering, loading, searchedMovie, setActionsMovie }){
   const [scrollY] = useState(new Animated.Value(0));
 
   useEffect(() => {
+
     function getAllInformation() {
       getPlayings().then(playings => {
         setPlayings(playings);

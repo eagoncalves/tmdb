@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import * as Typograph from 'constants/typography';
+import * as Typography from 'constants/typography';
 import * as Colors from 'constants/colors';
 import * as Mixins from 'constants/mixins';
 
@@ -29,17 +29,19 @@ export const styles = StyleSheet.create({
     height: 24,
     color: Colors.WHITE,
     fontSize: 13,
-    fontWeight: Typograph.FONT_WEIGHT_BOLD,
+    fontWeight: Typography.FONT_WEIGHT_BOLD,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
     lineHeight: 24,
-    textTransform: Typograph.FONT_TEXT_UPPERCASE,
+    textTransform: Typography.FONT_TEXT_UPPERCASE
   },
   see: {
-    width: 39,
+    width: 42,
     height: 24,
     opacity: 0.6,
     color: Colors.WHITE,
     fontSize: 13,
-    fontWeight: Typograph.FONT_WEIGHT_REGULAR,
+    fontWeight: Typography.FONT_WEIGHT_REGULAR,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
     lineHeight: 24,
   },
   header: {
@@ -68,12 +70,13 @@ export const styles = StyleSheet.create({
   title: {
     color: Colors.WHITE,
     fontSize: 26,
-    fontWeight: Typograph.FONT_WEIGHT_REGULAR,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontWeight: Typography.FONT_WEIGHT_REGULAR,
     lineHeight: 40,
     width: 250
   },
   loadingText:{
     color: Colors.WHITE,
-    fontSize: 15,
+    fontSize: 15
   }
 });
