@@ -7,7 +7,7 @@ function Average ({ rating }) {
   return (
       <AirbnbRating 
         showRating={false} 
-        selectedColor={Colors.START_SELECTED}
+        selectedColor={Colors.STAR_SELECTED}
         size={15}
         defaultRating={rating}
         isDisabled={true}

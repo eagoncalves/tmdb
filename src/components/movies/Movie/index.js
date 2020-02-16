@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { styles } from  './styles';
+
 import Animated from 'react-native-reanimated';
 import Spinner from 'react-native-loading-spinner-overlay';
 import SearchInput from 'components/shared/SearchInput';
 import MovieList from '../MovieList';
-import { getPlayings, getPopular, getTopRated, getUpcoming, query } from 'services/api';
+
+import { getPlayings, getPopular, getTopRated, getUpcoming } from 'services/api';
+
 import * as MovieActions from 'store/actions/movies';
 import { bindActionCreators } from 'redux'; 
 import { connect } from 'react-redux';
@@ -18,40 +21,28 @@ function Movie({ filtering, loading, searchedMovie, setActionsMovie }){
   const [upcomings, setUpcomings] =  useState([]);
   const [scrollY] = useState(new Animated.Value(0));
 
-  const HEADER_MAX_HEIGHT = 217;
-  const HEADER_MIN_HEIGHT = Platform.OS === 'ios' ? 80 : 93;
-  const HEADER_SCROLL_DISTANCE = HEADER_MAX_HEIGHT - HEADER_MIN_HEIGHT;
-
-    useEffect(() => {
-      function getAllInformation() {
-        getPlayings().then(playings => {
-          setPlayings(playings);
-          getPopular().then(popular => {
-            setPopular(popular);
-            getTopRated().then(topRated => {
-              setTops(topRated);
-              getUpcoming().then(upcoming => {
-                setUpcomings(upcoming);
-                setActionsMovie(false, false, {});
-              })
+  useEffect(() => {
+    function getAllInformation() {
+      getPlayings().then(playings => {
+        setPlayings(playings);
+        getPopular().then(popular => {
+          setPopular(popular);
+          getTopRated().then(topRated => {
+            setTops(topRated);
+            getUpcoming().then(upcoming => {
+              setUpcomings(upcoming);
+              setActionsMovie(false, false, {});
             })
           })
-        });
-      }
+        })
+      });
+    }
       
-      getAllInformation();
+    getAllInformation();
 
     }, [])
 
-    const headerHeight = scrollY.interpolate(
-      {
-        inputRange: [0, 20],
-        outputRange: [217, 180],
-        extrapolate: 'clamp',
-      }
-    );
-
-    const headerTitleHeight = scrollY.interpolate(
+    const headerLineOpacity = scrollY.interpolate(
       {
         inputRange: [0, 0.7, 1],
         outputRange: [1, 0.7, 0],
@@ -121,13 +112,12 @@ function Movie({ filtering, loading, searchedMovie, setActionsMovie }){
               </View>
             </View>
               <SearchInput />
-              {/* <View style={ styles.headerLine }></View> */}
-              <Animated.View style={[styles.headerLine, { opacity: headerTitleHeight }] }></Animated.View>
+              <Animated.View style={[styles.headerLine, { opacity: headerLineOpacity }] }></Animated.View>
         </View>
         
         <Animated.ScrollView 
           vertical
-          contentContainerStyle={{ paddingTop: HEADER_MAX_HEIGHT }}
+          contentContainerStyle={{ paddingTop: 217 }}
           scrollEventThrottle={16}
           onScroll={Animated.event(
             [{ nativeEvent: { contentOffset: { y: scrollY } } }],

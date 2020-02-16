@@ -1,9 +1,10 @@
 import { Dimensions } from 'react-native';
 
-export const WINDOW_WIDTH = Dimensions.get('window').width;
-export const WINDOW_HEIGHT = Dimensions.get('window').height;
+const dimensions =  Dimensions.get('screen');
+export const WINDOW_WIDTH = dimensions.width;
+export const WINDOW_HEIGHT = dimensions.height;
+export const WIDTH_MARGIN  = dimensions.width * 0.85;
 export const WIDTH_HUNDRED = '100%';
-export const WIDTH_MARGIN  = Dimensions.get('screen').width * 0.85;
 export const HEIGHT_HUNDRED = '100%';
 export const ROW = 'row';
 export const COLUMN = 'column';

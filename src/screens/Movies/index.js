@@ -1,10 +1,10 @@
 
 import React, { useEffect }from 'react';
-import { ScrollView, View, Text} from 'react-native'
-import { Container } from './styles'
+import { styles } from './styles'
+import { View } from 'react-native'
 import Movie from 'components/movies/Movie';
 
-import * as NavigationActions from '../../store/actions/navigation';
+import * as NavigationActions from 'store/actions/navigation';
 import { bindActionCreators } from 'redux'; 
 import { connect } from 'react-redux';
 
@@ -16,9 +16,9 @@ function Movies ({ navigation, setNavigation }) {
   }, [])
 
   return (
-    <Container>
+    <View style={styles.container}>
       <Movie />
-    </Container>
+    </View>
   );
 }
 
