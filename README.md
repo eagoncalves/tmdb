@@ -4,11 +4,10 @@ React-native project developed using the movie database api and Expo framework.
 ## Steps to configure and run this project.
 
 ### Pre-requisities:
-  Node.js installed in order to install the Expo CLI.
+  <strong> Node.js installed in order to install the Expo CLI. </strong>
 
   - Download or copy this repository: <code> https://github.com/eagoncalves/tmdb.git </code>
-  - Install and configure Expo by command: <strong> npm install -g expo-cli</strong> or if you prefer use yarn <strong> yarn add expo-cli </strong>
-    you might find the complete guide on [Expo Get Started](https://docs.expo.io/versions/v36.0.0/get-started/installation/).
+  - Install and configure Expo by command: <strong> npm install -g expo-cli</strong> or if you prefer use yarn <strong> yarn add expo-cli </strong> , you might find the complete guide on [Expo Get Started](https://docs.expo.io/versions/v36.0.0/get-started/installation/).
   - After copy or download this repository you have to address into main folter project and execute yarn add or npm install in order to download all dependencies.
   - Perform the yarn add command or npm start command in order to up the server.
   - So now you can execute the app through your device by installing the expo app in your device and using the Scan QRCode options.
